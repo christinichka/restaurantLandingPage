@@ -50,25 +50,24 @@ body {
 }
 
 .freshness {
-    /* background-image: url("images/pexels-jonathan-borba-2983102.jpg"); */
     background-color: whitesmoke;
     height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: relative;
 }
 
 .fresh-text {
     text-align: center;
-    padding: 100px 25px 25px 100px;
+    padding: 200px 25px 25px 100px;
 }
 
 .fresh-image {
     max-width: 100%;
     height: auto;
-    padding: 100px 25px 25px 100px;
-    float: right;
+    padding: 200px 25px 25px 100px;
+    float: left;
 }
 
 .fun-text {
@@ -80,15 +79,22 @@ body {
     background-image: url("images/pexels-shamia-casiano-2015097.jpg");
     background-color: whitesmoke;
     height: 800px;
+    width:100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: relative;
+    text-align: right;
+    padding: 250px 50px 25px 100px;
+}
+
+.menu-title {
+    color: orangered;
+    font-style: italic;
 }
 
 .menu-text {
-    color: orangered;
-    font-style: italic;
+    color:#ffffff;
 }
 
 .location {
@@ -96,9 +102,9 @@ body {
     height: 800px;
     background-repeat: no-repeat;
     text-align: center;
-    background-size: cover;
     max-width: 100%;
     height: auto;
     padding: 100px 25px 25px 100px;
     float: right;
+    position:relative;
 }
