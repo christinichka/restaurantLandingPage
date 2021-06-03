@@ -36,7 +36,6 @@ public class HelloController {
         return "Hello, " + name + "!";
     }
 
-
     @GetMapping("form")
     @ResponseBody
     public String helloForm() {
@@ -49,5 +48,56 @@ public class HelloController {
                 "</body>" +
                 "</html>";
     }
+
+    @GetMapping("langForm")
+    @ResponseBody
+    public String langForm() {
+        return "<html>" +
+                "<body>" +
+                "<form action = 'hello' method = 'get'>" +
+                "<input type = 'text' name = 'name' >" +
+                "<select name 'choice'>" +
+                "<option value='first'>English</option>" +
+                "<option value='second'>Russian</option>" +
+                "<option value='third'>Spanish</option>" +
+                "<option value='four'>French</option>" +
+                "<option value='five'>Mandarin Chinese</option>" +
+                "</select>" +
+                "<input type = 'submit' value = 'Greet Me!' >" +
+                "</form>" +
+                "</body>" +
+                "</html>";
+    }
+
+    @RequestMapping(value="hello", method = RequestMethod.POST)
+    @ResponseBody
+    public String helloPost(@RequestParam String name, @RequestParam String language) {
+        if (name == null) {
+            name = "World";
+        }
+        return createMessage(name, language);
+    }
+
+    public static String createMessage(String n, String l) {
+        String greeting = "";
+
+        if (l.equals("English")) {
+            greeting = "Hello";
+        }
+        else if (l.equals("Russian")){
+            greeting = "Zdravstvuyte";
+        }
+        else if (l.equals("Spanish")){
+            greeting = "Hola";
+        }
+        else if (l.equals("French")) {
+            greeting = "Bonjour";
+        }
+        else if (l.equals("Mandarin Chinese")) {
+            greeting = "Ni Hao";
+        }
+        return greeting + " " + n;
+    }
+
 
 }
