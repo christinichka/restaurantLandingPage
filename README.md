@@ -1,2 +1,2 @@
-# restaurantLandingPage
-Landing Page for Fictious Upscale Burger joint, "Rivers Burgers".
+# Restaurant Landing Page
+Landing Page for Fictious Upscale Burger joint, "Rivers Burgers". 
